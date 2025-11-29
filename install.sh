@@ -342,7 +342,7 @@ PACKAGES_TERMINAL=(
 )
 
 PACKAGES_FONTS=(
-    cabextract fontconfig xfonts-utils ttf-dejavu ttf-ubuntu-font-family ttf-roboto
+    cabextract fontconfig ttf-dejavu ttf-ubuntu-font-family ttf-roboto
     ttf-ms-fonts nerd-fonts-noto noto-fonts-cjk noto-fonts-emoji noto-fonts
 )
 
