@@ -343,7 +343,7 @@ PACKAGES_TERMINAL=(
 
 PACKAGES_FONTS=(
     cabextract fontconfig ttf-dejavu ttf-ubuntu-font-family ttf-roboto
-    ttf-ms-fonts nerd-fonts-noto noto-fonts-cjk noto-fonts-emoji noto-fonts
+    noto-fonts-cjk noto-fonts-emoji noto-fonts
 )
 
 PACKAGES_BUILD=(
