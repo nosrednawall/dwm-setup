@@ -306,7 +306,7 @@ fi
 PACKAGES_CORE=(
     xorg-server xorg-xsetroot xf86-input-wacom libwacom i2c-tools networkmanager
     libnotify ripgrep fd findutils lxsession pacman-contrib less xdg-user-dirs
-    sxhkd pv arandr jq bc gnup gxdotool git git-lfs stow base-devel linux-headers
+    sxhkd pv arandr jq bc gnupg xdotool git git-lfs stow base-devel linux-headers
     nano linux-firmware inotify-tools go wget dosfstools ntfsprogs ly flatpak
     timeshift grub-btrfs
 )
