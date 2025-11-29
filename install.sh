@@ -142,6 +142,7 @@ install_yay() {
     git clone https://aur.archlinux.org/yay.git "$temp_dir"
 
     # Executa makepkg sem mudar de diretório
+    cd "$temp_dir"
     makepkg -p "$temp_dir/PKGBUILD" -si --noconfirm
 }
 
