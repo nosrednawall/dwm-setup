@@ -354,7 +354,7 @@ PACKAGES_BUILD=(
 
 PACKAGES_YAY=(
     python-pywal16 wpgtk-git c3-bin numix-icon-theme-git xwinwrap-git cava gnome-ssh-askpass3
-    nordvpn-bin google-chrome syncthingtray timeshift-autosnap
+    nordvpn-bin google-chrome syncthingtray timeshift-autosnap  ttf-ms-fonts nerd-fonts-noto
 )
 
 PACKAGES_FLATPAK=(
@@ -420,6 +420,8 @@ if [ "$ONLY_CONFIG" = false ]; then
     if [ $escolha = "1" ]; then
         install_virt_manager
     fi
+
+
 
     # Enable services
     sudo systemctl enable NetworkManager.service docker.service nordvpnd.service ly.service grub-btrfsd
