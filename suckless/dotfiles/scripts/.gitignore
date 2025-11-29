@@ -1,0 +1,8 @@
+
+# Protect scripts with no extension
+!changevolume
+!dwm-tabs
+!help
+!power
+!redshift-off
+!redshift-on
