@@ -348,13 +348,13 @@ PACKAGES_FONTS=(
 
 PACKAGES_BUILD=(
     make gcc libx11 libxft libxinerama harfbuzz imlib2 libxrandr
-    libxcb libx11 xcb-util gd gtk-engine-murrine xsettingsd libpillowfight
+    libxcb libx11 xcb-util gd xsettingsd libpillowfight
     python-pillow-heif python-pillowfight python-pyscreenshot python-gobject
 )
 
 PACKAGES_YAY=(
     python-pywal16 wpgtk-git c3-bin numix-icon-theme-git xwinwrap-git cava gnome-ssh-askpass3
-    nordvpn-bin google-chrome syncthingtray timeshift-autosnap  ttf-ms-fonts nerd-fonts-noto
+    nordvpn-bin google-chrome syncthingtray timeshift-autosnap ttf-ms-fonts nerd-fonts-noto gtk-engine-murrine
 )
 
 PACKAGES_FLATPAK=(
