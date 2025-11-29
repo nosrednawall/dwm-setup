@@ -328,7 +328,7 @@ PACKAGES_AUDIO=(
 )
 
 PACKAGES_UTILITIES=(
-    epapirus-icon-theme papirus-icon-theme lxappearance qt5ct bluez bluez-tools
+    papirus-icon-theme lxappearance qt5ct bluez bluez-tools
     bluez-utils blueman ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base
     gst-plugins-bad gst-libav gstreamer mpv vlc vlc-plugins-all ueberzugpp mpv-mpris
     libreoffice-fresh libreoffice-fresh-pt-br aspell-pt atril xournalpp qalculate-gtk
