@@ -244,8 +244,44 @@ extract_dotfiles_tar() {
 
     echo "Extraindo todos os arquivos tar.gz para $HOME..."
 
-    # Encontra e extrai todos os tar.gz recursivamente
-    find "$dotfiles_dir" -name "*.tar.gz" -type f -exec echo "Extraindo: {}" \; -exec tar -xzf {} -C "$HOME" --overwrite \;
+    # Encontra e processa todos os tar.gz recursivamente
+    find "$dotfiles_dir" -name "*.tar.gz" -type f | while read -r tar_file; do
+        echo "Processando: $tar_file"
+
+        # Extrai o conteúdo do tar.gz primeiro para uma pasta temporária para inspecionar
+        local temp_dir=$(mktemp -d)
+
+        # Extrai para a pasta temporária
+        tar -xzf "$tar_file" -C "$temp_dir" 2>/dev/null
+
+        # Encontra o primeiro diretório na extração (assumindo que há um diretório principal)
+        local extracted_dir=$(find "$temp_dir" -maxdepth 1 -mindepth 1 -type d | head -n 1)
+
+        if [[ -n "$extracted_dir" ]]; then
+            # Obtém apenas o nome da pasta
+            local dir_name=$(basename "$extracted_dir")
+
+            # Caminho completo no diretório de destino
+            local target_dir="$HOME/$dir_name"
+
+            # Verifica se o diretório já existe
+            if [[ -d "$target_dir" ]]; then
+                # Renomeia o diretório existente
+                local backup_name="${dir_name}_backup_$(date +%Y%m%d_%H%M%S)"
+                echo "Diretório $target_dir já existe. Renomeando para $backup_name"
+                mv "$target_dir" "$HOME/$backup_name"
+            fi
+
+            # Move o diretório extraído para o destino
+            mv "$extracted_dir" "$HOME/"
+            echo "Extraído: $dir_name"
+        else
+            echo "Aviso: Nenhum diretório encontrado em $tar_file"
+        fi
+
+        # Limpa a pasta temporária
+        rm -rf "$temp_dir"
+    done
 
     echo "Extração completa!"
 }
@@ -407,7 +443,7 @@ if [ "$ONLY_CONFIG" = false ]; then
     flatpak install "${PACKAGES_FLATPAK[@]}" -y || die "Failed to install flatpaks programs"
 
     msg "Installing emacs..."
-    install_emacs || die "Failed to install emacs"
+    install_emacs || die "Failyed to install emacs"
 
     msg "Installing docker..."
     sudo pacman -S --noconfirm "${PACKAGES_DOCKER[@]}" || die "Failed to install docker"
