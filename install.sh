@@ -355,7 +355,7 @@ PACKAGES_BUILD=(
 
 PACKAGES_YAY=(
     python-pywal16 wpgtk-git c3-bin numix-icon-theme-git xwinwrap-git cava gnome-ssh-askpass3
-    nordvpn-bin google-chrome syncthingtray timeshift-autosnap ttf-ms-fonts nerd-fonts-noto gtk-engine-murrine
+    nordvpn-bin google-chrome timeshift-autosnap ttf-ms-fonts nerd-fonts-noto gtk-engine-murrine
 )
 
 PACKAGES_FLATPAK=(
