@@ -422,8 +422,6 @@ if [ "$ONLY_CONFIG" = false ]; then
         install_virt_manager
     fi
 
-
-
     # Enable services
     sudo systemctl enable NetworkManager.service docker.service nordvpnd.service ly.service grub-btrfsd
 
@@ -546,13 +544,13 @@ COLOR_6="#8ec07c"     # Cyan
 COLOR_7="#b8bb26"     # Light Green
 COLOR_8="#928374"     # Light Gray
 COLOR_9="#f2c76e"     # Pink
-COLOR_10="#ffa347"   # Purple
-COLOR_11="#ff6e5a"   # Light Red
-COLOR_12="#e9aec5"   # Magenta
-COLOR_13="#a7c7d4"   # Light Blue
-COLOR_14="#b0d9a1"   # Cyan
-COLOR_15="#d5d85c"   # Light Green
-COLOR_16="#b5aa99"   # Light Gray
+COLOR_10="#ffa347"    # Purple
+COLOR_11="#ff6e5a"    # Light Red
+COLOR_12="#e9aec5"    # Magenta
+COLOR_13="#a7c7d4"    # Light Blue
+COLOR_14="#b0d9a1"    # Cyan
+COLOR_15="#d5d85c"    # Light Green
+COLOR_16="#b5aa99"    # Light Gray
 EOF
 
 cat > ~/.cache/dwmblocks_modo_operacao << EOF
